@@ -8,8 +8,9 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.Spark;
+import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.command.Subsystem;
-
+import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 
 /**
  * An example subsystem.  You can replace me with your own Subsystem.
@@ -19,10 +20,17 @@ public class DriveTrain extends Subsystem {
   // here. Call these from Commands.
 
   
-  /*
-  public static Spark leftMotor;
-  public static Spark rightMotor;
-  */
+  //the types of motors are sparks right now because "SparkMax NEO" is not yet a valid choice for motors :/ 
+  public static Spark leftMotor_b;
+  public static Spark rightMotor_b;
+  public static Spark leftMotor_f;
+  public static Spark rightMotor_f;
+
+  public SpeedControllerGroup leftMotors = new SpeedControllerGroup(leftMotor_b, leftMotor_f);
+  public SpeedControllerGroup rightMotors = new SpeedControllerGroup(rightMotor_b, rightMotor_f);
+  DifferentialDrive allMotors = new DifferentialDrive(leftMotors, rightMotors);
+
+  
 
   @Override
   public void initDefaultCommand() {
