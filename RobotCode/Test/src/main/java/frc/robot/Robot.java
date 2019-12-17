@@ -13,11 +13,7 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.commands.MoveForward;
-<<<<<<< HEAD
-import frc.robot.subsystems.DriveTrain;;
-=======
 import frc.robot.subsystems.DriveTrain;
->>>>>>> fbe81542eab788b87c68b50034d6c14face54c2e
 
 /**
  * The VM is configured to automatically run this class, and to call the
