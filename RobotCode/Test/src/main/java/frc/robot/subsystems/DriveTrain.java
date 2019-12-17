@@ -7,6 +7,8 @@
 
 package frc.robot.subsystems;
 
+import com.revrobotics.CANSparkMax;
+
 import edu.wpi.first.wpilibj.Spark;
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.command.Subsystem;
@@ -21,10 +23,10 @@ public class DriveTrain extends Subsystem {
 
   
   //the types of motors are sparks right now because "SparkMax NEO" is not yet a valid choice for motors :/ 
-  public static Spark leftMotor_b;
-  public static Spark rightMotor_b;
-  public static Spark leftMotor_f;
-  public static Spark rightMotor_f;
+  public static CANSparkMax leftMotor_b;
+  public static CANSparkMax rightMotor_b;
+  public static CANSparkMax leftMotor_f;
+  public static CANSparkMax rightMotor_f;
 
   public SpeedControllerGroup leftMotors = new SpeedControllerGroup(leftMotor_b, leftMotor_f);
   public SpeedControllerGroup rightMotors = new SpeedControllerGroup(rightMotor_b, rightMotor_f);
