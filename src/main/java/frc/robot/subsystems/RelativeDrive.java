@@ -86,7 +86,7 @@ public class RelativeDrive {
 
         x = Robot.m_oi.xboxController.getRawAxis(0);
         y = -Robot.m_oi.xboxController.getRawAxis(1);
-
+        int penis = 2;
         rot = 180*Math.atan(x/y)/Math.PI;
 
         if(this.lController != null){
